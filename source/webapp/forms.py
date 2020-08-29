@@ -3,7 +3,7 @@ from webapp.models import Poll, Choice
 from django.forms import widgets
 
 
-class ProductForm(forms.ModelForm):
+class PollForm(forms.ModelForm):
     class Meta:
         model = Poll
         fields = ['question']

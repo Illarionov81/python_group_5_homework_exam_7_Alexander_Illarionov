@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}View poll{% endblock %}
+
+{% block menu %}
+{#    <li class="nav-item px-3">#}
+{#        <a class="navbar-brand" href="{% url 'task_add_view' product.pk %}">Добавить продукт</a>#}
+{#    </li>#}
+{#    <li class="nav-item px-3">#}
+{#        <a class="navbar-brand"  href="{% url 'project_delete' project.pk %}" >Удалить</a>#}
+{#    </li>#}
+{#<li class="nav-item px-3">#}
+{#    <a class="navbar-brand"  href="{% url 'product_update' product.pk %}" >Редактировать</a>#}
+{#</li>#}
+{% endblock %}
+
+{% block contant %}
+<div class="row">
+    <div class="col col-lg-12 text-center">
+        <h1 class="pt-5"><b>Опрос №: {{ poll.pk }}.
+{#            <a href="{% url 'product_update' product.pk %}" ><button type="button"  class="btn btn-success">Update</button></a>#}
+{#            <a href="{% url 'product_delete' product.pk %}" ><button type="button"  class="btn btn-danger">Delete. </button></a>#}
+{#            <a href="{% url 'add_to_basket' product.pk %}" ><button type="button"  class="btn btn-warning">Add to basket. </button></a>#}
+        </b></h1>
+        <div class="box">
+            {{ poll.question | linebreaks }}
+        </div>
+        <p><b>Дата: </b> {{ poll.created_at }}</p>
+    </div>
+</div>
+<hr>
+<div class="col col-lg-12 ">
+    <h3>Answer:</h3>
+    <div class="row">
+        <div class="col col-lg-12">
+            {% if is_paginated %}
+                {% include 'partial/pagination.html' %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="col col-lg-12">
+    {% for answer in answers %}
+    <hr>
+    <div class="row">
+        <div class="col col-lg-6">
+{#            <h3><a href="{% url 'task_view' answer.pk %}">№{{ task.pk }}. Status: <b>{{ task.status.get_status_display }}</b></a> </h3>#}
+            <h5> Answer: №{{ answer.pk }}.</h5>
+            <div class="box">
+                <p><b>{{ answer.choice_answer }}</b></p>
+            </div>
+        </div>
+{#        <div class="coL col-lg-1 mt-5">#}
+{#            <a href="{% url 'task_update_view' task.pk %}" ><button type="submit"  class="btn btn-success">Update</button></a>#}
+{#        </div>#}
+{#        <div class="coL col-lg-1 mt-5">#}
+{#            <a href="{% url 'task_delete_view' task.pk %}" ><button type="submit"  class="btn btn-danger">Delete</button></a>#}
+{#        </div>#}
+{#        <div class="coL col-lg-1 mt-5">#}
+{#            <a href="{% url 'task_view' task.pk %}" ><button type="submit"  class="btn btn-warning"> View </button></a>#}
+{#        </div>#}
+    </div>
+    {% endfor %}
+    <hr>
+    <div class="col col-lg-12">
+        {% if is_paginated %}
+            {% include 'partial/pagination.html' %}
+        {% endif %}
+    </div>
+</div>
+    <hr>
+{% endblock %}
+
