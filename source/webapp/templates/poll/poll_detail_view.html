@@ -55,6 +55,9 @@
             {% include 'partial/pagination.html' %}
         {% endif %}
     </div>
+    <h3 class=" col-md-6 pt-4"><b>Create Answer</b></h3>
+        {% url "poll_answer_add" pk=poll.pk as action_url %}
+    {% include 'partial/form.html' with action_url=action_url form_method='post' %}
 </div>
     <hr>
 {% endblock %}

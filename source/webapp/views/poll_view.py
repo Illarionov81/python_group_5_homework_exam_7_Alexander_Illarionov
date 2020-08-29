@@ -2,7 +2,7 @@ from django.core.paginator import Paginator
 from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from webapp.forms import SimpleSearchForm, PollForm
+from webapp.forms import SimpleSearchForm, PollForm, ChoiceForm
 from webapp.models import Poll
 
 
@@ -29,10 +29,13 @@ class OnePollView(DetailView):
     model = Poll
     paginate_comments_by = 5
     paginate_comments_orphans = 0
+    from_class = ChoiceForm
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         answers, page, is_paginated = self.paginate_comments(self.object)
+        form = ChoiceForm
+        context['form'] = form
         context['answers'] = answers
         context['page_obj'] = page
         context['is_paginated'] = is_paginated
