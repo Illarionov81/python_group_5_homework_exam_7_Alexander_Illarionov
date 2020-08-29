@@ -27,7 +27,7 @@ class Choice(models.Model):
 
 class Answer(models.Model):
     choice = models.ForeignKey('webapp.Choice', related_name='answer', on_delete=models.CASCADE, verbose_name='Ответ')
-    poll = models.ForeignKey('webapp.Poll', related_name='answer', on_delete=models.CASCADE, verbose_name='Ответ')
+    poll = models.ForeignKey('webapp.Poll', related_name='answer', on_delete=models.CASCADE, verbose_name='Вопрос')
     add_at = models.DateTimeField(auto_now_add=True, verbose_name='Время заполнения')
     
     def __str__(self):

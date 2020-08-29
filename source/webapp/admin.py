@@ -17,7 +17,7 @@ class ChoiceAdmin(admin.ModelAdmin):
 
 
 class AnswerAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'add_at',)
+    list_display = ('pk', 'add_at', )
     list_display_links = ('pk', 'add_at',)
 
 
