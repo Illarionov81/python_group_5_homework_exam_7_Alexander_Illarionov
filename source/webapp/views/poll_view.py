@@ -10,7 +10,7 @@ from webapp.models import Poll
 
 
 class PollView(ListView):
-    template_name = 'poll/poll_view.html'
+    template_name = 'poll/polls_view.html'
     context_object_name = 'poll_list'
     model = Poll
     form = SimpleSearchForm
@@ -71,10 +71,10 @@ class PollUpdateView(UpdateView):
         return reverse('poll_view', kwargs={'pk': self.object.pk})
 
 
-# class ProductDeleteView(DeleteView):
-#     model = Product
-#     template_name = 'product/product_delete.html'
-#     success_url = reverse_lazy('products')
+class PollDeleteView(DeleteView):
+    model = Poll
+    template_name = 'poll/poll_delete.html'
+    success_url = reverse_lazy('polls')
 
 
 

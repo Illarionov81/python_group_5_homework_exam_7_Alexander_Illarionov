@@ -3,7 +3,7 @@
   "model": "webapp.poll",
   "pk": 1,
   "fields": {
-    "question": "\u041e\u0442\u0432\u0435\u0442\u0442\u0435 \u043d\u0430 \u0432\u043e\u043f\u0440\u043e\u0441:...........................................?",
+    "question": "\u041e\u043f\u0440\u043e\u0441 \u21161",
     "created_at": "2020-08-29T05:54:00.778Z"
   }
 },
@@ -11,7 +11,7 @@
   "model": "webapp.poll",
   "pk": 2,
   "fields": {
-    "question": "\u0421\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0439 \u0432\u043e\u043f\u0440\u043e\u0441: .............................. ?",
+    "question": "\u041e\u043f\u0440\u043e\u0441 \u21162",
     "created_at": "2020-08-29T05:54:39.158Z"
   }
 },
@@ -19,8 +19,48 @@
   "model": "webapp.poll",
   "pk": 3,
   "fields": {
-    "question": "\u0418 \u0435\u0449\u0435 \u043e\u0434\u0438\u043d \u0432\u043e\u043f\u0440\u043e\u0441:..................................................?",
+    "question": "\u041e\u043f\u0440\u043e\u0441 \u21163",
     "created_at": "2020-08-29T05:54:59.875Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 4,
+  "fields": {
+    "question": "\u041e\u043f\u0440\u043e\u0441 \u21164",
+    "created_at": "2020-08-29T06:52:00.197Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 5,
+  "fields": {
+    "question": "\u041e\u043f\u0440\u043e\u0441 \u2116 5",
+    "created_at": "2020-08-29T06:53:03.697Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 6,
+  "fields": {
+    "question": "\u041e\u043f\u0440\u043e\u0441 \u2116 6",
+    "created_at": "2020-08-29T06:53:14.557Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 7,
+  "fields": {
+    "question": "\u041e\u043f\u0440\u043e\u0441 \u2116 7",
+    "created_at": "2020-08-29T06:53:24.547Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 8,
+  "fields": {
+    "question": "\u0414\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u043e \u0441 \u0444\u043e\u0440\u043c\u044b?\r\n\u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u043e",
+    "created_at": "2020-08-29T07:38:57.617Z"
   }
 },
 {
