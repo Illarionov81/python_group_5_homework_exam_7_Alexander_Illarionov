@@ -1,13 +1,18 @@
 from django import forms
-from webapp.models import Product
+from webapp.models import Poll, Choice
 from django.forms import widgets
 
 
 class ProductForm(forms.ModelForm):
     class Meta:
-        model = Product
-        exclude = []
-        widgets = {'category': forms.widgets.Select}
+        model = Poll
+        fields = ['question']
+
+
+class ChoiceForm(forms.ModelForm):
+    class Meta:
+        model = Choice
+        fields = ['choice_answer']
 
 
 class SimpleSearchForm(forms.Form):

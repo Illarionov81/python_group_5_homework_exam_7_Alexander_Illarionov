@@ -1,0 +1,68 @@
+[
+{
+  "model": "webapp.poll",
+  "pk": 1,
+  "fields": {
+    "question": "\u041e\u0442\u0432\u0435\u0442\u0442\u0435 \u043d\u0430 \u0432\u043e\u043f\u0440\u043e\u0441:...........................................?",
+    "created_at": "2020-08-29T05:54:00.778Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 2,
+  "fields": {
+    "question": "\u0421\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0439 \u0432\u043e\u043f\u0440\u043e\u0441: .............................. ?",
+    "created_at": "2020-08-29T05:54:39.158Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 3,
+  "fields": {
+    "question": "\u0418 \u0435\u0449\u0435 \u043e\u0434\u0438\u043d \u0432\u043e\u043f\u0440\u043e\u0441:..................................................?",
+    "created_at": "2020-08-29T05:54:59.875Z"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 1,
+  "fields": {
+    "choice_answer": "\u0414\u0430",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 2,
+  "fields": {
+    "choice_answer": "\u041d\u0435\u0442",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 3,
+  "fields": {
+    "choice_answer": "\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e",
+    "poll": 1
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$yuO66jfn74aC$bOO/BIqCxSicOSvUq9V2Zif4r/Fmvc/2CrAwg5wKV/8=",
+    "last_login": "2020-08-29T06:02:33.643Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-08-29T05:44:36.826Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
