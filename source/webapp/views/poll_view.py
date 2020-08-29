@@ -1,7 +1,4 @@
 from django.core.paginator import Paginator
-from django.db.models import Q, F
-from django.shortcuts import render
-from django.shortcuts import redirect
 from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
@@ -30,7 +27,7 @@ class PollView(ListView):
 class OnePollView(DetailView):
     template_name = 'poll/poll_detail_view.html'
     model = Poll
-    paginate_comments_by = 2
+    paginate_comments_by = 5
     paginate_comments_orphans = 0
 
     def get_context_data(self, **kwargs):
