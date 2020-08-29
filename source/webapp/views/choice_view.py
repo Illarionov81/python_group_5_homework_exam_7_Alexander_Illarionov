@@ -26,3 +26,12 @@ class AnswerUpdateView(UpdateView):
 
     def get_success_url(self):
         return reverse('poll_view', kwargs={'pk': self.object.poll.pk})
+
+
+class AnswerDeleteView(DeleteView):
+    model = Choice
+    template_name = 'choice/choice_delete.html'
+    context_object_name = 'answer'
+
+    def get_success_url(self):
+        return reverse("poll_view", kwargs={'pk': self.object.poll.pk})

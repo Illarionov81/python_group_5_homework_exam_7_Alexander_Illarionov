@@ -43,9 +43,9 @@
         <div class="coL col-lg-1 mt-5">
             <a href="{% url 'answer_update' answer.pk %}" ><button type="button"  class="btn btn-success">Update</button></a>
         </div>
-{#        <div class="coL col-lg-1 mt-5">#}
-{#            <a href="{% url 'task_delete_view' task.pk %}" ><button type="submit"  class="btn btn-danger">Delete</button></a>#}
-{#        </div>#}
+        <div class="coL col-lg-1 mt-5">
+            <a href="{% url 'answer_delete_view' answer.pk %}" ><button type="button"  class="btn btn-danger">Delete</button></a>
+        </div>
     </div>
     {% endfor %}
     <hr>
