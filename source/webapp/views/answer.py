@@ -17,9 +17,10 @@ class AnswerSaveView(View):
 
     def post(self, request, *args, **kwargs):
         if request.method == 'POST':
-            answer = Answer()
-            poll = get_object_or_404(Poll, pk=self.kwargs.get('pk'))
-            answer.choice_id = request.POST.get('id')
-            answer.poll_id = poll.pk
-            answer.save()
+            if request.POST.get('id'):
+                answer = Answer()
+                poll = get_object_or_404(Poll, pk=self.kwargs.get('pk'))
+                answer.choice_id = request.POST.get('id')
+                answer.poll_id = poll.pk
+                answer.save()
         return redirect('polls')
