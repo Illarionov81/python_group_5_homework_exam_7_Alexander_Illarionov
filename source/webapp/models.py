@@ -23,3 +23,16 @@ class Choice(models.Model):
     class Meta:
         verbose_name = 'Ответ'
         verbose_name_plural = 'Ответы'
+
+
+class Answer(models.Model):
+    choice = models.ForeignKey('webapp.Choice', related_name='answer', on_delete=models.CASCADE, verbose_name='Ответ')
+    poll = models.ForeignKey('webapp.Poll', related_name='answer', on_delete=models.CASCADE, verbose_name='Ответ')
+    add_at = models.DateTimeField(auto_now_add=True, verbose_name='Время заполнения')
+    
+    def __str__(self):
+        return "{}".format(self.pk)
+
+    class Meta:
+        verbose_name = 'Answer'
+        verbose_name_plural = 'Answers'
