@@ -62,15 +62,15 @@ class PollCreateView(CreateView):
         return reverse('poll_view', kwargs={'pk': self.object.pk})
 
 
-# class ProductUpdateView(UpdateView):
-#     model = Product
-#     template_name = 'product/product_update.html'
-#     form_class = ProductForm
-#
-#     def get_success_url(self):
-#         return reverse('product_view', kwargs={'pk': self.object.pk})
-#
-#
+class PollUpdateView(UpdateView):
+    model = Poll
+    template_name = 'poll/poll_update.html'
+    form_class = PollForm
+
+    def get_success_url(self):
+        return reverse('poll_view', kwargs={'pk': self.object.pk})
+
+
 # class ProductDeleteView(DeleteView):
 #     model = Product
 #     template_name = 'product/product_delete.html'

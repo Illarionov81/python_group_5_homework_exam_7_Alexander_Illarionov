@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from webapp.views import PollView, OnePollView, PollCreateView
+from webapp.views import PollView, OnePollView, PollCreateView, PollUpdateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', PollView.as_view(), name='polls'),
     path('poll/<int:pk>/', OnePollView.as_view(), name='poll_view'),
     path('poll/add/', PollCreateView.as_view(), name='poll_create_view'),
+    path('poll/<int:pk>/update/', PollUpdateView.as_view(), name='poll_update_view'),
 
 ]
