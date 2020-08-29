@@ -27,7 +27,7 @@
 </div>
 
 <div class="col col-lg-12">
-{#<form action="{% url '#'%}" method="POST">#}
+<form action="{% url 'save_answer_view' poll.pk%}" method="POST">
 {% csrf_token %}
     {% for answer in answers %}
         <hr>
@@ -45,8 +45,8 @@
             </div>
         </div>
     {% endfor %}
-    <div class="col col-lg-6 pt-4 mt-2 type_battot_delete_all">
-        <input class="btn btn-danger" type="submit" value="Отправить">
+    <div class="col col-lg-6 pt-4 mt-2 ">
+        <input class="btn btn-info" type="submit" value="Отправить">
     </div>
 </form>
     <hr>

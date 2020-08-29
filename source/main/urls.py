@@ -18,7 +18,7 @@ from django.urls import path
 
 from webapp.views import PollView, OnePollView, PollCreateView, PollUpdateView, PollDeleteView, AnswerCreateView, \
     AnswerUpdateView, AnswerDeleteView
-from webapp.views.answer import CollectAnswerCreateView
+from webapp.views.answer import CollectAnswerCreateView, AnswerSaveView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,6 +33,6 @@ urlpatterns = [
     path('poll/<int:pk>/answer/delete/', AnswerDeleteView.as_view(), name='answer_delete_view'),
 
     path('collect_answer/<int:pk>/', CollectAnswerCreateView.as_view(), name='collect_answer_view'),
-
+    path('save_answer/<int:pk>/', AnswerSaveView.as_view(), name='save_answer_view'),
 
 ]
