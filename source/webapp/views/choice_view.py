@@ -6,7 +6,7 @@ from webapp.models import Poll, Choice
 from webapp.forms import ChoiceForm
 
 
-class ArticleCreateView(CreateView):
+class AnswerCreateView(CreateView):
     model = Choice
     template_name = 'choice/choice_create.html'
     form_class = ChoiceForm
@@ -17,3 +17,12 @@ class ArticleCreateView(CreateView):
         answer.poll = poll
         answer.save()
         return redirect('poll_view', pk=poll.pk)
+
+
+class AnswerUpdateView(UpdateView):
+    model = Choice
+    template_name = 'choice/choice_update.html'
+    form_class = ChoiceForm
+
+    def get_success_url(self):
+        return reverse('poll_view', kwargs={'pk': self.object.poll.pk})
